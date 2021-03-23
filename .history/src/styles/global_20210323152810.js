@@ -86,10 +86,8 @@ export const GlobalStyle = createGlobalStyle`
         border: 0;
         background: transparent;
 
-        transition: filter 0.3s;
-
         &:hover {
-            filter: brightness(0.8);
+            filter: brightness(0.9);
         }
     }
 `;

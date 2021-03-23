@@ -38,7 +38,6 @@ export const Container = styled.form`
        border: 0;
        font-size: 1rem;
        margin-top: 1.5rem;
-       font-weight: 600;
 
        transition: filter 0.3s; 
 

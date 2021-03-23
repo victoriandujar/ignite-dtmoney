@@ -26,24 +26,17 @@ export const Container = styled.form`
       & + input {
           margin-top: 1rem;
       }
-  }
 
-  button[type="submit"] {
-       width: 100%;
-       padding: 0 1.5rem;
-       height: 4rem;
-       background: var(--green);
-       color: #fff;
-       border-radius: 0.25rem;
-       border: 0;
-       font-size: 1rem;
-       margin-top: 1.5rem;
-       font-weight: 600;
-
-       transition: filter 0.3s; 
-
-       &:hover {
-           filter: brightness(0.9);
-       }
+      button[type="submit"] {
+          width: 100%;
+          padding: 0 1.5rem;
+          height: 4rem;
+          background: var(--green);
+          color: #fff;
+          border-radius: 0.25rem;
+          border: 0;
+          font-size: 1rem;
+          margin-top: 1.5rem;
+      }
   }
 `;
