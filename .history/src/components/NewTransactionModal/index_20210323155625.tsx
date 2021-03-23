@@ -40,20 +40,12 @@ export default function NewTransactionModal({isOpen, onRequestClose}: NewTransac
             <input type="number" placeholder="Valor"/>
 
             <TransactionTypeContainer>
-              <RadioBox 
-              type="button" 
-              onClick={() => setType('deposit') }
-              isActive={type === 'deposit'}
-              >
+              <RadioBox type="button" onClick={() => setType('deposit') }>
                 <img src={IncomeImg} alt="Entrada"/>
                 <span>Entrada</span>
               </RadioBox>
 
-              <RadioBox 
-              type="button" 
-              onClick={() => setType('withdraw') }
-              isActive={type === 'withdraw'}
-              >
+              <RadioBox type="button" onClick={() => setType('withdraw') }>
                 <img src={OutcomeImg} alt="Saída"/>
                 <span>Saída</span>
               </RadioBox>
