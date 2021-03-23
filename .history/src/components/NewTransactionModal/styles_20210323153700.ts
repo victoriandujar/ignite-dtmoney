@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import { darken } from 'polished';
-
 export const Container = styled.form`
   h2 {
       color: var(--text-title);
@@ -66,20 +64,9 @@ export const TransactionTypeContainer = styled.div`
         align-items: center;
         justify-content: center;
 
-        &:hover {
-            border-color: ${darken(0.1, '#d7d7d7')}
-        }
-
         img {
             width: 20px;
             height: 20px;
-        }
-
-        span {
-            display: inline-block;
-            margin-left: 1rem;
-            font-size: 1rem;
-            color: var(--text-title);
         }
     }
 `;
