@@ -14,21 +14,10 @@ interface NewTransactionModalProps {
 }
 
 export default function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModalProps) {
-  const [title, setTitle] = useState('');
-  const [value, setValue] = useState(0);
-  const [category, setCategory] = useState('');
-  
   const [type, setType] = useState('deposit');  
 
   function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
-
-    console.log({
-      title,
-      value,
-      category,
-      type
-    })
   }
   
   return (
@@ -50,18 +39,9 @@ export default function NewTransactionModal({isOpen, onRequestClose}: NewTransac
         <Container onSubmit={handleCreateNewTransaction}>
             <h2>Cadastrar transação</h2>
 
-            <input 
-            placeholder="Título" 
-            value={title}
-            onChange={event => setTitle(event.target.value)}
-            />
+            <input placeholder="Título"/>
 
-            <input 
-            type="number" 
-            placeholder="Valor"
-            value={value}
-            onChange={event => setValue(Number(event.target.value))}
-            />
+            <input type="number" placeholder="Valor"/>
 
             <TransactionTypeContainer>
               <RadioBox 
@@ -85,11 +65,7 @@ export default function NewTransactionModal({isOpen, onRequestClose}: NewTransac
               </RadioBox>
             </TransactionTypeContainer>
 
-            <input 
-            placeholder="Categoria"
-            value={category}
-            onChange={event => setCategory(event.target.value)}
-            />
+            <input placeholder="Categoria"/>
 
             <button type="submit">Cadastrar</button>
         </Container>

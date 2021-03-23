@@ -22,13 +22,6 @@ export default function NewTransactionModal({isOpen, onRequestClose}: NewTransac
 
   function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
-
-    console.log({
-      title,
-      value,
-      category,
-      type
-    })
   }
   
   return (

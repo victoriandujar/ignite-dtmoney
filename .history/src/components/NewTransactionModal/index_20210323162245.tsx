@@ -22,13 +22,6 @@ export default function NewTransactionModal({isOpen, onRequestClose}: NewTransac
 
   function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
-
-    console.log({
-      title,
-      value,
-      category,
-      type
-    })
   }
   
   return (
@@ -56,12 +49,7 @@ export default function NewTransactionModal({isOpen, onRequestClose}: NewTransac
             onChange={event => setTitle(event.target.value)}
             />
 
-            <input 
-            type="number" 
-            placeholder="Valor"
-            value={value}
-            onChange={event => setValue(Number(event.target.value))}
-            />
+            <input type="number" placeholder="Valor"/>
 
             <TransactionTypeContainer>
               <RadioBox 
@@ -85,11 +73,7 @@ export default function NewTransactionModal({isOpen, onRequestClose}: NewTransac
               </RadioBox>
             </TransactionTypeContainer>
 
-            <input 
-            placeholder="Categoria"
-            value={category}
-            onChange={event => setCategory(event.target.value)}
-            />
+            <input placeholder="Categoria"/>
 
             <button type="submit">Cadastrar</button>
         </Container>
