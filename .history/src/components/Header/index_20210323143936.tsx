@@ -8,14 +8,14 @@ interface HeaderProps {
     onOpenNewTransactionModal: () => void;
 }
 
-export function Header({onOpenNewTransactionModal}: HeaderProps) {
+export function Header() {
     return(
         <Container>
           <Content>
             <img src={Logo} alt="logo dt money" />
             <button 
             type="button" 
-            onClick={onOpenNewTransactionModal}
+            onClick={handleOpenNewTransactionModal}
             >
                 Nova transação
             </button>

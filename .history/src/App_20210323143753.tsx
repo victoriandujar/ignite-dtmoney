@@ -6,8 +6,6 @@ import { Dashboard } from './components/Dashboard';
 
 import Modal from 'react-modal';
 
-Modal.setAppElement('#root');
-
 function App() {
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
 
@@ -21,7 +19,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
+      <Header />
       <Dashboard />
 
       <Modal 
