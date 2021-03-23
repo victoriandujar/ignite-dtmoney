@@ -7,7 +7,7 @@ import { api } from '../../services/api';
 export function TransactionsTable() {
     useEffect(() => {
         api.get('/transactions')
-        .then(response => console.log(response.data))
+        .then(data => console.log(data))
     }, []);
 
     return(
