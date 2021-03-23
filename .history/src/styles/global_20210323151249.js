@@ -76,6 +76,5 @@ export const GlobalStyle = createGlobalStyle`
         padding: 3rem;
         position: relative;
         border-radius: 0.25rem;
-        border: 0;
     }
 `;
