@@ -33,13 +33,6 @@ export default function NewTransactionModal({isOpen, onRequestClose}: NewTransac
       category,
       type,
     })
-
-    setTitle('');
-    setAmount(0);
-    setCategory('');
-    setType('deposit');
-
-    onRequestClose();
   }
   
   return (
