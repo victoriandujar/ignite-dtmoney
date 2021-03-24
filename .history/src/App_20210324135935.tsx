@@ -23,7 +23,7 @@ function App() {
         setIsNewTransactionModalOpen(false);
     }
   return (
-    <TransactionsContext.Provider value={[]}>
+    <TransactionsContext.Provider>
       <GlobalStyle />
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
       <Dashboard />
