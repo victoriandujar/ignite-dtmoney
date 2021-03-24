@@ -5,10 +5,10 @@ import OutcomeImg from '../../assets/outcome.svg';
 import TotalImg from '../../assets/total.svg';
 
 import { Container } from './styles';
-import { useTransactions } from '../../hooks/useTransactions';
+import { TransactionsContext } from '../../TransactionsContext';
 
 export function Summary() {
-    const { transactions } = useTransactions();
+    const { transactions } = useContext(TransactionsContext);
 
     const summary = transactions.reduce((acc, transaction) => {
         if(transaction.type === 'deposit') {
@@ -35,12 +35,7 @@ export function Summary() {
                     <p>Entradas</p>
                     <img src={IncomeImg} alt="Entrada"/>
                 </header>
-                <strong>
-                {new Intl.NumberFormat('pt-BR', {
-                    style: 'currency',
-                    currency: 'BRL'
-                }).format(summary.deposits)}
-                </strong>
+                <strong>R${summary.deposits}</strong>
             </div>
 
             <div>
@@ -48,13 +43,7 @@ export function Summary() {
                     <p>Saídas</p>
                     <img src={OutcomeImg} alt="Saida"/>
                 </header>
-                <strong>
-                    -
-                    {new Intl.NumberFormat('pt-BR', {
-                    style: 'currency',
-                    currency: 'BRL'
-                }).format(summary.widthdraws)}
-                </strong>
+                <strong>- R${summary.widthdraws}</strong>
             </div>
 
             <div className="green">
@@ -62,12 +51,7 @@ export function Summary() {
                     <p>Total</p>
                     <img src={TotalImg} alt="Total"/>
                 </header>
-                <strong>
-                {new Intl.NumberFormat('pt-BR', {
-                    style: 'currency',
-                    currency: 'BRL'
-                }).format(summary.total)}
-                </strong>
+                <strong>R${summary.total}</strong>
             </div>
         </Container>
     );

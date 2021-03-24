@@ -5,10 +5,10 @@ import OutcomeImg from '../../assets/outcome.svg';
 import TotalImg from '../../assets/total.svg';
 
 import { Container } from './styles';
-import { useTransactions } from '../../hooks/useTransactions';
+import { TransactionsContext } from '../../TransactionsContext';
 
 export function Summary() {
-    const { transactions } = useTransactions();
+    const { transactions } = useContext(TransactionsContext);
 
     const summary = transactions.reduce((acc, transaction) => {
         if(transaction.type === 'deposit') {
