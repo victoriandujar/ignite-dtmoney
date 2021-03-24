@@ -18,11 +18,11 @@ interface TransactionsProviderProps {
 }
 
 interface TransactionContextData {
-    transactions: Transaction[];
+    transaction: Transaction[];
     createTransaction: (transaction: TransactionInput) => void;
 }
 
-export const TransactionsContext = createContext<TransactionContextData>({} as TransactionContextData);
+export const TransactionsContext = createContext<TransactionContextData[]>([]);
 
 export function TransactionsProvider({children}: TransactionsProviderProps) {
     const [transactions, setTransactions] = useState<Transaction[]>([]);
@@ -37,7 +37,7 @@ export function TransactionsProvider({children}: TransactionsProviderProps) {
     }
 
     return (
-        <TransactionsContext.Provider value={{ transactions, createTransaction }}>
+        <TransactionsContext.Provider value={{transactions, createTransaction}}>
             {children}
         </TransactionsContext.Provider>
     );
