@@ -11,7 +11,7 @@ interface Transaction {
     createdAt: string;
 }
 
-type TransactionInput = Omit<Transaction, 'id' | 'createdAt'>
+type TransactionInput = Omit<Transaction, 'id' | 'createdAt'>;
 
 interface TransactionsProviderProps {
     children: ReactNode;

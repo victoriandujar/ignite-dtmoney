@@ -17,12 +17,12 @@ interface TransactionsProviderProps {
     children: ReactNode;
 }
 
-interface TransactionsContextData {
+interface TransactionContextData {
     transactions: Transaction[];
     createTransaction: (transaction: TransactionInput) => Promise<void>;
 }
 
-export const TransactionsContext = createContext<TransactionsContextData>({} as TransactionsContextData);
+export const TransactionsContext = createContext<TransactionContextData>({} as TransactionContextData);
 
 export function TransactionsProvider({children}: TransactionsProviderProps) {
     const [transactions, setTransactions] = useState<Transaction[]>([]);
